@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitButton = document.getElementById("submit");
     const tooltip = document.getElementById("tooltip");
     const errorMessage = document.getElementById("error");
+    const feedbackDisplay = document.getElementById("feedback-display");
 
     commentBox.addEventListener("input", function () {
         const count = commentBox.value.length;
@@ -26,13 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
             tooltip.textContent = tip;
             tooltip.style.display = "block";
         }
-  });
+    });
 
     form.addEventListener("mouseout", function (e) {
         if (e.target.matches("input, textarea")) {
             tooltip.style.display = "none";
         }
-  });
+    });
 
     form.addEventListener("mousemove", function (e) {
         if (e.target.matches("input, textarea")) {
@@ -55,7 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-    alert("Thank you for your input!");
+        const submission = document.createElement("p");
+        submission.textContent = `${username.value} (${email.value}) said: "${commentBox.value}"`
+
+        feedbackDisplay.appendChild(submission);
+
+        form.reset();
+        characterCount.textContent = "0 characters";
     
     });
+
 })
