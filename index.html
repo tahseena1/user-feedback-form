@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
     <title>User Input Form</title>
 </head>
@@ -13,14 +14,14 @@
     <form id="user-input-form">
         <div>
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Type Here!">
+            <input type="text" id="username" name="username" placeholder="Type Here!" data-tooltip="Username here" >
         </div>
 
         <br>
 
         <div>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@email.com">
+            <input type="email" id="email" name="email" placeholder="example@email.com" data-tooltip="Email here">
         </div>
 
         <br>
@@ -28,16 +29,19 @@
         <div>
             <label for="comments">Leave your thoughts here:</label>
             <br>
-            <textarea id="comments" name="comments" placeholder="Type Here!"></textarea>
+            <textarea id="comments" name="comments" placeholder="Type Here!" data-tooltip="Comments here"></textarea>
             <p id="character-count"> 0 characters</p>
         </div>
 
         <br>
 
         <div>
-            <button type="submit" id="submit" name="submit" >Submit</button>
+            <button type="submit" id="submit" name="submit" data-tooltip="Click to submit">Submit</button>
         </div>
+       
     </form>
+
+     <div id="tooltip"></div>
 
     <script src="cp_1.js"></script>
 </body>

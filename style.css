@@ -1,0 +1,36 @@
+body {
+  font-family: Times, 'Times New Roman' ;
+  margin: 30px;
+}
+
+form {
+  max-width: 500px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0 5px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.char-count {
+  font-size: 0.9em;
+  color: #555;
+}
+
+#tooltip {
+  position: absolute;
+  display: none;
+  background: #5d1717;
+  color: #fff;
+  font-size: 14px;
+  padding: 4px;
+  border-radius: 5px;
+}
