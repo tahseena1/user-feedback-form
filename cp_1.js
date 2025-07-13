@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const characterCount = document.getElementById("character-count");
     const submitButton = document.getElementById("submit");
     const tooltip = document.getElementById("tooltip");
+    const errorMessage = document.getElementById("error");
 
     commentBox.addEventListener("input", function () {
         const count = commentBox.value.length;
@@ -39,5 +40,22 @@ document.addEventListener("DOMContentLoaded", function () {
             tooltip.style.left = `${e.pageX + 10}px`;
         }
     });
-});
 
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); 
+
+        errorMessage.textContent = "";
+
+        if (
+            username.value.trim() === "" ||
+            email.value.trim() === "" ||
+            commentBox.value.trim() === ""
+        ) {
+            errorMessage.textContent = "One or more fields is missing. Please fill out all fields before submitting.";
+            return;
+        }
+
+    alert("Thank you for your input!");
+    
+    });
+})

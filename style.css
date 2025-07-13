@@ -34,3 +34,9 @@ button {
   padding: 4px;
   border-radius: 5px;
 }
+
+#error {
+  color: red;
+  font-weight: bold;
+  margin-top: 15px;
+}
