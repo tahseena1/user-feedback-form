@@ -1,10 +1,12 @@
 body {
   font-family: Times, 'Times New Roman' ;
   margin: 30px;
+  align-items: center;
 }
 
 form {
   max-width: 500px;
+  align-items: center;
 }
 
 input, textarea {
@@ -13,6 +15,7 @@ input, textarea {
   margin: 10px 0 5px;
   padding: 8px;
   font-size: 1rem;
+  align-items: canter;
 }
 
 button {

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const errorMessage = document.getElementById("error");
     const feedbackDisplay = document.getElementById("feedback-display");
 
-    commentBox.addEventListener("input", function () {
+    form.addEventListener("input", function () {
         const count = commentBox.value.length;
         if (count === 1) {
             characterCount.textContent = `${count} character`;
@@ -65,5 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
         characterCount.textContent = "0 characters";
     
     });
+
+    form.addEventListener("click", function(e) {
+        e.stopPropagation();
+    })
 
 })
