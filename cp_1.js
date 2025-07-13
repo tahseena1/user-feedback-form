@@ -15,4 +15,4 @@ commentBox.addEventListener("input", function () {
     }
     else {characterCount.textContent = `${count} characters`};
 });
-}
+});
