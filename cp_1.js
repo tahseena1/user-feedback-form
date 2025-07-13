@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Establishing the HTML elements in JavaScript file 
     const form = document.getElementById("user-input-form");
     const fields = form.querySelectorAll("input, textarea");
     const username = document.getElementById("username");
@@ -10,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const errorMessage = document.getElementById("error");
     const feedbackDisplay = document.getElementById("feedback-display");
 
+    // Will count characters in the textbox as the user types; 
+    // It will be displayed outside of the textbox
     form.addEventListener("input", function () {
         const count = commentBox.value.length;
         if (count === 1) {
@@ -18,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         else {characterCount.textContent = `${count} characters`};
     });
 
+    // Displays tooltip text when mouse hovers over each field
     form.addEventListener("mouseover", function (e) {
         const target = e.target;
         if (!target.matches("input, textarea")) return;
@@ -42,11 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    
     form.addEventListener("submit", function (e) {
         e.preventDefault(); 
 
         errorMessage.textContent = "";
 
+        // If any of the necessary fields are empty, the error message will display 
         if (
             username.value.trim() === "" ||
             email.value.trim() === "" ||
@@ -56,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        // If all fields are filled out correctly, a message will return indicating successful submission 
         const submission = document.createElement("p");
         submission.textContent = `${username.value} (${email.value}) said: "${commentBox.value}"`
 
@@ -66,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     });
 
+    // Stops any interactions from affecting factors outside of those mentioned in the code above
     form.addEventListener("click", function(e) {
         e.stopPropagation();
     })

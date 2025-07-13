@@ -12,16 +12,20 @@
     <h1>User Input Form</h1>
 
     <form id="user-input-form">
+
+        <!--Creates input section for username-->
         <div>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" placeholder="Type Here!" data-tooltip="Username here" >
         </div>
     <br>
+        <!--Creates input section for email-->
         <div>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="example@email.com" data-tooltip="Email here">
         </div>
     <br>
+        <!--Creates text area for comments-->
         <div>
             <label for="comments">Leave your thoughts here:</label>
             <br>
@@ -29,14 +33,20 @@
             <p id="character-count"> 0 characters</p>
         </div>
     <br>
+        <!--Creates button for submission-->
         <div>
             <button type="submit" id="submit" name="submit" data-tooltip="Click to submit">Submit</button>
         </div>
        
     </form>
 
+    <!--Establishes a space for an error message-->
     <h3 id="error"></h3>
+
+    <!--Establushes a space success message -->
     <div id="feedback-display"></div>
+
+    <!--Establishes tooltip-->
     <div id="tooltip"></div>
     <script src="cp_1.js"></script>
 </body>

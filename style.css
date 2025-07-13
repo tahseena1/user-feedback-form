@@ -1,15 +1,26 @@
 body {
   font-family: Times, 'Times New Roman' ;
+  color: #2b5380;
   margin: 30px;
   background-color: #e5ecf9;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("star_pic.png");
+  background-repeat: repeat-y;
+  background-repeat: repeat-x;
+  background-repeat: repeat;
+  background-position: right top;
 }
 
+h1{
+  background: #f7f9fd;
+  padding: 20px;
+  border-radius: 8px;
+}
 form {
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   background: #f7f9fd;
   padding: 20px;
@@ -34,7 +45,7 @@ button {
   margin: auto;
 }
 
-.char-count, #feedback-display {
+.char-count {
   font-size: 0.9em;
   color: #555;
 }
@@ -53,4 +64,17 @@ button {
   color: red;
   font-weight: bold;
   margin-top: 15px;
+  background-color: #e5ecf9;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#feedback-display {
+  color: #f7f9fd;
+  font-style: italic;
+  margin-top: 8px;
+  background: #2b5380;
+  padding: 8px;
+  border-radius: 8px;
 }
