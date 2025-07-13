@@ -1,12 +1,16 @@
 body {
   font-family: Times, 'Times New Roman' ;
   margin: 30px;
+  background-color: #e5ecf9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 form {
   max-width: 500px;
-  align-items: center;
+  width: 100%;
 }
 
 input, textarea {
@@ -15,15 +19,19 @@ input, textarea {
   margin: 10px 0 5px;
   padding: 8px;
   font-size: 1rem;
-  align-items: canter;
+  border-radius: 4px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 button {
   padding: 10px 20px;
   cursor: pointer;
+  display: block;
+  margin: auto;
 }
 
-.char-count {
+.char-count, #feedback-display {
   font-size: 0.9em;
   color: #555;
 }
@@ -31,7 +39,7 @@ button {
 #tooltip {
   position: absolute;
   display: none;
-  background: #5d1717;
+  background: #2b5380;
   color: #fff;
   font-size: 14px;
   padding: 4px;
